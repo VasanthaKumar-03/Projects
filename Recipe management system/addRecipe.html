@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+    margin: 0;
+    font-family: Cursive,Brush Script MT;
+    background-color: #E8E8E8;
+    background-size: 100% 100%;
+    height: 100vh;
+}
+.navbar{
+    display: flex;
+    /* padding: 10px; */
+    padding-left: 10px;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: #000000;
+
+}
+.navbar h2{
+    color: white;
+    font-size: 2em;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.logo{
+    flex: 6;
+    font-family: Cursive,Brush Script MT;
+}
+.opt,.lbtn{
+    flex: 1;
+}
+
+.navbar a{
+    padding: 20px;
+    width: 200px;
+    font-size: 1.1em;
+    color: beige;
+}
+.opt:hover{
+    color: red;
+    font-size: 1.2em;
+    transition-duration: 0.3s;
+}
+.lbtn:active{
+    background-color: rgb(253, 168, 0);
+}
+.lbtn{
+    padding: 10px;
+    width: 100px;
+    font-size: medium;
+    background-color: #7c0f0f;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    margin: 0;
+    border: rgb(73, 4, 4) solid;
+}
+.lbtn:hover{
+    background-color: #5b0a0a;
+}.lbtn:active{
+    background-color: #4b0909;
+}
+.opt{
+    text-decoration: none;
+    text-align: center;
+
+}
+.container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+}
+.div-items{
+    background-color: beige;
+    border: #000000 solid;
+    height: 200px;
+    margin: 10px;
+}
+.container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            padding-bottom: 50px;
+            margin-bottom:50px;
+        }
+        input{
+            width: 100%;
+            height: 40px;
+            margin-bottom: 25px;
+            margin-top: 15px;
+            border: 0;
+            border-radius: 7px;
+            background-color: beige;
+            font-size: 20px;
+        }
+        textarea{
+            margin-bottom: 25px;
+            margin-top: 15px;
+            width: 100%;
+            border-radius: 7px;
+            background-color: beige;
+            border: 0;
+            font-size: 20px;
+        }
+        form{
+            width: 45%;
+        background-color: bisque   ;
+        padding: 50px;
+        border-radius: 20px;
+        box-shadow: 0 0 50px rgb(100, 54, 54);
+        }
+        button{
+            width: 200px;
+            font-size: 20px;
+            padding: 15px;
+            text-align: center;
+            margin-top: 35px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: rgb(212, 77, 43);
+            border: 0;
+            border-radius: 10px;
+            color: aliceblue;
+            box-shadow: 0 0 10px rgb(64, 13, 13);
+        }
+        button:hover{
+            background-color: rgb(195, 64, 31);
+            cursor: pointer;
+        }
+        h1{
+        padding:20px;
+        }
+    </style>
+    <title>Add Recipe</title>
+</head>
+<body>
+<div class="navbar">
+    <h2 class="logo">RecipeRealm</h2>
+    <a class="opt" href="/viewRecipes">Home</a>
+    <a class="opt" href="/addrecipe_page">Add Recipe</a>
+    <a class="opt" href="/profile">Profile</a>
+    <a class="lbtn" href="/start">Logout</a>
+<!--    <a class="lbtn" href="/create">Register</a>-->
+</div>
+
+<h1>Add Recipe</h1>
+<div class="container">
+        <form action="/addrecipe" method="post">
+            <label for="recipename">Recipe Name</label><br>
+            <input name="recipename" type="text" id="recipename" placeholder="Enter Recipe name"><br>
+            <label for="category">Category</label><br>
+            <input name="category" type="text" id="category" placeholder="Enter category"><br>
+            <label for="ingredients">Enter ingredients</label><br>
+            <textarea name="ingredients" id="ingredients" cols="30" rows="10" placeholder="ingredients (seperated by comma)"></textarea><br>
+            <label for="instructions">Enter instructions</label><br>
+            <textarea name="instructions" id="instructions" cols="30" rows="10" placeholder="add instructions"></textarea><br>
+            <label for="cookingtime">Cooking time</label><br>
+            <input name="cookingtime" type="text" id="cookingtime" placeholder="Enter Cooking time"><br>
+            <button type="submit">Add recipe</button>
+        </form>
+</div>
+</body>
+</html>
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Add Recipe</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <form action="/addrecipe" method="post">-->
+<!--        <label for="recipename">Recipe Name</label><br>-->
+<!--        <input name="recipename" type="text" id="recipename" placeholder="Enter Recipe name"><br>-->
+<!--        <label for="ingredients">Enter ingredients</label><br>-->
+<!--        <textarea name="ingredients" id="ingredients" cols="30" rows="10" placeholder="ingredients (seperated by comma)"></textarea><br>-->
+<!--        <label for="instructions">Enter instructions</label><br>-->
+<!--        <textarea name="instructions" id="instructions" cols="30" rows="10" placeholder="add instructions"></textarea><br>-->
+<!--        <label for="cookingtime">Cooking time</label><br>-->
+<!--        <input name="cookingtime" type="text" id="cookingtime" placeholder="Enter Cooking time"><br>-->
+<!--        <label for="category">Category</label><br>-->
+<!--        <input name="category" type="text" id="category" placeholder="Enter category"><br>-->
+<!--        <button type="submit">Add</button>-->
+<!--    </form>-->
+<!--</body>-->
+<!--</html>-->

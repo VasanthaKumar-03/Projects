@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="new_acc.css">
+    <title>Create new account</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Create new account</h1>
+        <p id="result"></p>
+        <form action="/createAcc" method="post">
+        <label for="Emailid">Email ID</label><br>
+        <input type="email" name="Emailid" id="Emailid" class="input" placeholder="Enter Email ID"><br>
+        <label for="Userid">User ID</label><br>
+        <input type="text" name="Userid" id="Userid" class="input" placeholder="Enter User ID"><br>
+        <label for="username">Username</label><br>
+        <input type="text" name="Username" id="Username" class="input" placeholder="Enter Username"><br>
+        <label for="Password">Password</label><br>
+        <input type="password" name="Password" id="Password" class="input" placeholder="Create password"><br>
+        <div><button id="btn" type="submit">Create account</button></div>
+        </form>
+    </div>
+</body>
+</html>

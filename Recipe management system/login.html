@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <p id="result"></p>
+        <form action="/submit" method="post">
+        <label for="username" class="label">Username</label><br>
+            <input type="text" id="username" name="username" class="input" placeholder="Enter username"></input><br>
+        <label for="password" class="label">Password</label><br>
+        <input type="password" id="password" name="password" class="input" placeholder="Enter your password"></input><br>
+        <a href="/create">Create new account</a>
+        <div  class="button"><button id="submit" type="submit" class="btn">submit</button></div>
+        <h4>or</h4>
+        </form>
+        <div class="button" ><a href="/viewGuestRecipes"><input type="submit" class="btn" value="Login as guest"></input></a></div>
+
+    </div>
+
+</body>
+</html>
